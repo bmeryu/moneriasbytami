@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monerías TRV - Detalles con Amor</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <style>
+        /* Estilos personalizados inspirados en el logo */
+        :root {
+            --brand-brown: #5D4037; /* Marrón del texto del logo */
+            --brand-coral: #F58A7A; /* Coral del lazo */
+            --brand-yellow: #FBC02D; /* Amarillo del corazón */
+            --brand-teal: #00838F;   /* Verde azulado del osito */
+            --brand-bg: #FDFBF5;     /* Fondo crema del logo */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--brand-bg);
+            color: var(--brand-brown);
+        }
+        .font-brand-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1200x800/FADCD9/5D4037?text=Moner%C3%ADas+TRV');
+            background-size: cover;
+            background-position: center;
+        }
+        .text-brand-brown { color: var(--brand-brown); }
+        .bg-brand-brown { background-color: var(--brand-brown); }
+        .text-brand-coral { color: var(--brand-coral); }
+        .bg-brand-coral { background-color: var(--brand-coral); }
+        .hover\:bg-brand-coral-dark:hover { background-color: #E57373; }
+        .hover\:text-brand-coral:hover { color: var(--brand-coral); }
+        .border-brand-coral { border-color: var(--brand-coral); }
+    </style>
+</head>
+<body class="text-brand-brown">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-3xl font-brand-title">
+                <a href="#">Monerías TRV</a>
+            </div>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#" class="text-gray-700 hover:text-brand-coral transition duration-300">Inicio</a>
+                <a href="#productos" class="text-gray-700 hover:text-brand-coral transition duration-300">Tienda</a>
+                <a href="#sobre-nosotros" class="text-gray-700 hover:text-brand-coral transition duration-300">Sobre Nosotros</a>
+                <a href="#contacto" class="text-gray-700 hover:text-brand-coral transition duration-300">Contacto</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                 <button class="text-gray-700 hover:text-brand-coral transition duration-300 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.16"/></svg>
+                    <span class="absolute -top-2 -right-2 bg-brand-coral text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </button>
+                <button id="menu-btn" class="md:hidden text-gray-700 hover:text-brand-coral">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90">
+            <a href="#" class="block py-2 px-6 text-sm text-gray-700 hover:bg-brand-coral/10">Inicio</a>
+            <a href="#productos" class="block py-2 px-6 text-sm text-gray-700 hover:bg-brand-coral/10">Tienda</a>
+            <a href="#sobre-nosotros" class="block py-2 px-6 text-sm text-gray-700 hover:bg-brand-coral/10">Sobre Nosotros</a>
+            <a href="#contacto" class="block py-2 px-6 text-sm text-gray-700 hover:bg-brand-coral/10">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg h-[60vh] md:h-[80vh] flex items-center justify-center text-white relative">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="text-center z-10 p-4">
+                <h1 class="text-4xl md:text-6xl font-brand-title mb-4 drop-shadow-lg">Detalles con Amor</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow-md">Accesorios únicos y hechos a mano para las princesas de la casa.</p>
+                <a href="#productos" class="bg-brand-coral hover:bg-brand-coral-dark text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">Ver Colección</a>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="productos" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-brand-title text-center mb-4">Nuestros Favoritos</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto">Descubre los diseños más pedidos, creados con cintas y apliques de la mejor calidad.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="bg-white rounded-lg border border-gray-200/80 overflow-hidden group transform hover:-translate-y-2 transition duration-300 hover:shadow-xl">
+                        <div class="relative">
+                            <img src="https://placehold.co/400x400/F58A7A/FFFFFF?text=Lazo+Coral" alt="Lazo Coral" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="font-semibold text-lg">Lazo Encanto Coral</h3>
+                            <p class="text-brand-brown font-bold mt-2">$10.00</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="bg-white rounded-lg border border-gray-200/80 overflow-hidden group transform hover:-translate-y-2 transition duration-300 hover:shadow-xl">
+                        <div class="relative">
+                            <img src="https://placehold.co/400x400/FBC02D/FFFFFF?text=Diadema+Amarilla" alt="Diadema Amarilla" class="w-full h-64 object-cover">
+                             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="font-semibold text-lg">Diadema Sol Radiante</h3>
+                            <p class="text-brand-brown font-bold mt-2">$15.00</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="bg-white rounded-lg border border-gray-200/80 overflow-hidden group transform hover:-translate-y-2 transition duration-300 hover:shadow-xl">
+                        <div class="relative">
+                            <img src="https://placehold.co/400x400/00838F/FFFFFF?text=Set+Escolar" alt="Set Escolar" class="w-full h-64 object-cover">
+                             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="font-semibold text-lg">Set Escolar Aguamarina</h3>
+                            <p class="text-brand-brown font-bold mt-2">$20.00</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="bg-white rounded-lg border border-gray-200/80 overflow-hidden group transform hover:-translate-y-2 transition duration-300 hover:shadow-xl">
+                        <div class="relative">
+                            <img src="https://placehold.co/400x400/FFDAB9/5D4037?text=Clip+Osito" alt="Clip Osito" class="w-full h-64 object-cover">
+                             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                                <button class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="font-semibold text-lg">Clips Osito Amigo</h3>
+                            <p class="text-brand-brown font-bold mt-2">$8.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Section -->
+        <section id="sobre-nosotros" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/FADCD9/5D4037?text=Hecho+a+Mano" alt="Taller de Monerías TRV" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-brand-title mb-4">Hecho a Mano, con el Corazón</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            En Monerías TRV, cada lazo y accesorio es más que un simple adorno. Es una pieza de arte creada con dedicación, paciencia y mucho cariño. Nacimos de un sueño por llenar de color y alegría los días de las más pequeñas de la casa.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Utilizamos materiales de alta calidad para asegurar que cada "monería" sea tan duradera como hermosa. ¡Gracias por apoyar nuestro emprendimiento!
+                        </p>
+                        <a href="#" class="text-brand-coral font-bold hover:underline">Conoce más de nuestra historia &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Feed Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-brand-title mb-4">Síguenos en Instagram</h2>
+                <p class="text-gray-600 mb-12">Inspírate con nuestras últimas creaciones y únete a nuestra comunidad <a href="https://www.instagram.com/monerias_trv" target="_blank" class="text-brand-coral font-bold hover:underline">@monerias_trv</a></p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                    <a href="https://www.instagram.com/monerias_trv" target="_blank"><img src="https://placehold.co/300x300/F58A7A/FFFFFF?text=IG" alt="Instagram Post 1" class="rounded-lg shadow-md w-full h-full object-cover transform hover:scale-105 transition duration-300"></a>
+                    <a href="https://www.instagram.com/monerias_trv" target="_blank"><img src="https://placehold.co/300x300/FBC02D/FFFFFF?text=IG" alt="Instagram Post 2" class="rounded-lg shadow-md w-full h-full object-cover transform hover:scale-105 transition duration-300"></a>
+                    <a href="https://www.instagram.com/monerias_trv" target="_blank"><img src="https://placehold.co/300x300/00838F/FFFFFF?text=IG" alt="Instagram Post 3" class="rounded-lg shadow-md w-full h-full object-cover transform hover:scale-105 transition duration-300"></a>
+                    <a href="https://www.instagram.com/monerias_trv" target="_blank"><img src="https://placehold.co/300x300/FADCD9/FFFFFF?text=IG" alt="Instagram Post 4" class="rounded-lg shadow-md w-full h-full object-cover transform hover:scale-105 transition duration-300"></a>
+                    <a href="https://www.instagram.com/monerias_trv" target="_blank"><img src="https://placehold.co/300x300/5D4037/FFFFFF?text=IG" alt="Instagram Post 5" class="rounded-lg shadow-md w-full h-full object-cover transform hover:scale-105 transition duration-300"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-brand-brown text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-2xl font-brand-title text-brand-coral mb-4">Monerías TRV</h3>
+                    <p class="text-gray-300">Creando sonrisas, un lazo a la vez.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Enlaces Rápidos</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-300 hover:text-white">Políticas de Envío</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-300 hover:text-white">Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contacto</h4>
+                    <p class="text-gray-300 mb-2">📍 Trujillo, Venezuela</p>
+                    <p class="text-gray-300 mb-4">✉️ <a href="mailto:hola@moneriastrv.com" class="hover:text-white">hola@moneriastrv.com</a></p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://www.instagram.com/monerias_trv" target="_blank" class="text-gray-300 hover:text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                         <a href="#" class="text-gray-300 hover:text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-heart"><path d="M7.9 20A9 9 0 0 0 12 21.7a9.3 9.3 0 0 0 4.1-1.1"/><path d="M12 20h.01"/><path d="M21 15a2 2 0 0 0-2-2h-2v-2a2 2 0 0 0-2-2h-2a2 2 0 0 0-1.6.8"/><path d="M10 9.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1-5 0Z"/><path d="M22 12a10 10 0 1 0-10 10v-2.3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Monerías TRV. Todos los derechos reservados. Diseñado con ♥.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para el menú móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
