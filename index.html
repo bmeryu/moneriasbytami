@@ -74,6 +74,14 @@
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
+        
+        /* Estilos para los Modales (ventanas emergentes) */
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 <body class="text-brand-brown">
@@ -83,7 +91,7 @@
         <div class="container mx-auto px-6 py-2 flex justify-between items-center">
             <!-- Logo y Nombre de la Marca -->
             <a href="#" class="flex items-center gap-3">
-                <img src="logo_st.png" alt="Monerías de Tamara Logo" class="h-16 w-16 rounded-full object-cover border-2 border-gray-200 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/100/FDFBF5/5D4037?text=M&shape=circle';">
+                <img src="logo.jpg" alt="Monerías de Tamara Logo" class="h-16 w-16 rounded-full object-cover border-2 border-gray-200 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/100/FDFBF5/5D4037?text=M&shape=circle';">
                 <div>
                     <h1 class="font-brand-title text-2xl">Monerías de Tamara</h1>
                     <p class="text-xs text-gray-500 -mt-1">Detalles con Amor</p>
@@ -98,9 +106,8 @@
                 <a href="#contacto" class="text-gray-700 hover:text-brand-coral transition duration-300">Contacto</a>
             </nav>
 
-            <!-- Iconos y Menú Móvil -->
+            <!-- Menú Móvil -->
             <div class="flex items-center space-x-4">
-                 <!-- Carrito de compras eliminado -->
                 <button id="menu-btn" class="md:hidden text-gray-700 hover:text-brand-coral">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                 </button>
@@ -138,7 +145,7 @@
                         <div class="relative">
                             <img src="https://bmeryu.github.io/moneriasdetamara/ninaspeluche.jpg" alt="Niñas con peluches" class="w-full h-64 object-cover">
                             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
-                                <a href="https://wa.me/56998956864?text=Hola!%20Estoy%20interesado%20en%20los%20Conejitos%20Amigurumi." target="_blank" class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Consultar por WhatsApp</a>
+                                <a href="https://api.whatsapp.com/send?phone=569XXXXXXXX&text=Hola!%20Estoy%20interesado%20en%20los%20Conejitos%20Amigurumi." target="_blank" class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Consultar por WhatsApp</a>
                             </div>
                         </div>
                         <div class="p-6 text-center">
@@ -151,7 +158,7 @@
                         <div class="relative">
                             <img src="https://placehold.co/400x400/FBC02D/FFFFFF?text=Diadema+Amarilla" alt="Diadema Amarilla" class="w-full h-64 object-cover">
                              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
-                                <a href="https://wa.me/56998956864?text=Hola!%20Estoy%20interesado%20en%20la%20Diadema%20Sol%20Radiante." target="_blank" class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Consultar por WhatsApp</a>
+                                <a href="https://api.whatsapp.com/send?phone=569XXXXXXXX&text=Hola!%20Estoy%20interesado%20en%20la%20Diadema%20Sol%20Radiante." target="_blank" class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Consultar por WhatsApp</a>
                             </div>
                         </div>
                         <div class="p-6 text-center">
@@ -164,7 +171,7 @@
                         <div class="relative">
                             <img src="https://placehold.co/400x400/00838F/FFFFFF?text=Set+Escolar" alt="Set Escolar" class="w-full h-64 object-cover">
                              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
-                                <a href="https://wa.me/56998956864?text=Hola!%20Estoy%20interesado%20en%20el%20Set%20Escolar%20Aguamarina." target="_blank" class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Consultar por WhatsApp</a>
+                                <a href="https://api.whatsapp.com/send?phone=569XXXXXXXX&text=Hola!%20Estoy%20interesado%20en%20el%20Set%20Escolar%20Aguamarina." target="_blank" class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Consultar por WhatsApp</a>
                             </div>
                         </div>
                         <div class="p-6 text-center">
@@ -177,7 +184,7 @@
                         <div class="relative">
                             <img src="https://placehold.co/400x400/FFDAB9/5D4037?text=Clip+Osito" alt="Clip Osito" class="w-full h-64 object-cover">
                              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
-                                <a href="https://wa.me/56998956864?text=Hola!%20Estoy%20interesado%20en%20los%20Clips%20Osito%20Amigo." target="_blank" class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Consultar por WhatsApp</a>
+                                <a href="https://api.whatsapp.com/send?phone=569XXXXXXXX&text=Hola!%20Estoy%20interesado%20en%20los%20Clips%20Osito%20Amigo." target="_blank" class="bg-white text-brand-coral py-2 px-6 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition duration-300 border border-brand-coral">Consultar por WhatsApp</a>
                             </div>
                         </div>
                         <div class="p-6 text-center">
@@ -237,9 +244,9 @@
                 <div>
                     <h4 class="font-bold text-lg mb-4">Enlaces Rápidos</h4>
                     <ul>
-                        <li class="mb-2"><a href="#" class="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
-                        <li class="mb-2"><a href="#" class="text-gray-300 hover:text-white">Políticas de Envío</a></li>
-                        <li class="mb-2"><a href="#" class="text-gray-300 hover:text-white">Devoluciones</a></li>
+                        <li class="mb-2"><a href="javascript:void(0);" id="faq-link" class="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
+                        <li class="mb-2"><a href="javascript:void(0);" id="envios-link" class="text-gray-300 hover:text-white">Políticas de Envío</a></li>
+                        <li class="mb-2"><a href="javascript:void(0);" id="devoluciones-link" class="text-gray-300 hover:text-white">Devoluciones</a></li>
                     </ul>
                 </div>
                 <div>
@@ -253,8 +260,8 @@
                         <a href="#" class="text-gray-300 hover:text-white">
                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
-                         <a href="https://wa.me/56998956864?text=Hola!%20Me%20gustaría%20hacer%20una%20consulta." target="_blank" class="text-gray-300 hover:text-white">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-message-circle-heart"><path d="M.333 11.455c-1.135 4.33 1.28 8.88 5.61 10.015 1.26.32 2.575.32 3.835.002 1.135-.28 2.235-.84 3.22-1.57l4.56 2.28c.56.28 1.12-.28.84-.84l-2.28-4.56c.73-1.02 1.29-2.08 1.57-3.22.318-1.26.318-2.575 0-3.835C16.55 5.41 12 .33 7.67.33c-1.26 0-2.52.28-3.745.84l-1.68-2.28c-.28-.56-.84-.56-1.12 0L-.267 1.13c-.28.28-.28.84 0 1.12l2.28 1.68C.913 5.41.333 7.935.333 11.455zM12 8.515c2.8 0 5.04 2.24 5.04 5.04 0 2.8-2.24 5.04-5.04 5.04-2.8 0-5.04-2.24-5.04-5.04 0-2.8 2.24-5.04 5.04-5.04z"/></svg>
+                         <a href="https://api.whatsapp.com/send?phone=569XXXXXXXX&text=Hola!%20Me%20gustaría%20hacer%20una%20consulta." target="_blank" class="text-gray-300 hover:text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.333 11.455c-1.135 4.33 1.28 8.88 5.61 10.015 1.26.32 2.575.32 3.835.002 1.135-.28 2.235-.84 3.22-1.57l4.56 2.28c.56.28 1.12-.28.84-.84l-2.28-4.56c.73-1.02 1.29-2.08 1.57-3.22.318-1.26.318-2.575 0-3.835C16.55 5.41 12 .33 7.67.33c-1.26 0-2.52.28-3.745.84l-1.68-2.28c-.28-.56-.84-.56-1.12 0L-.267 1.13c-.28.28-.28.84 0 1.12l2.28 1.68C.913 5.41.333 7.935.333 11.455zM12 8.515c2.8 0 5.04 2.24 5.04 5.04 0 2.8-2.24 5.04-5.04 5.04-2.8 0-5.04-2.24-5.04-5.04 0-2.8 2.24-5.04 5.04-5.04z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -266,9 +273,70 @@
     </footer>
 
     <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/56998956864?text=Hola!%20Me%20gustaría%20hacer%20una%20consulta%20sobre%20tus%20productos." target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <a href="https://api.whatsapp.com/send?phone=569XXXXXXXX&text=Hola!%20Me%20gustaría%20hacer%20una%20consulta%20sobre%20tus%20productos." target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.847 6.062l-1.011 3.697 3.81-1.004z"/></svg>
     </a>
+
+    <!-- Modals -->
+    <!-- FAQ Modal -->
+    <div id="faq-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full transform scale-95">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-brand-title">Preguntas Frecuentes</h2>
+                <button class="close-modal text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-sm text-gray-600 max-h-[60vh] overflow-y-auto pr-4">
+                <div>
+                    <h3 class="font-semibold text-base text-brand-brown mb-1">¿Cuánto tiempo tardan en preparar mi pedido?</h3>
+                    <p>Al ser productos hechos 100% a mano, el tiempo de preparación es de 3 a 5 días hábiles. Te notificaremos por correo o WhatsApp cuando tu pedido esté listo para ser enviado.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-base text-brand-brown mb-1">¿Hacen pedidos personalizados?</h3>
+                    <p>¡Claro que sí! Nos encanta crear piezas únicas. Escríbenos por WhatsApp o a nuestro correo de contacto con tu idea y felices te ayudaremos a hacerla realidad.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-base text-brand-brown mb-1">¿Qué materiales utilizan?</h3>
+                    <p>Utilizamos hilos de algodón hipoalergénico para nuestros amigurumis y cintas de la más alta calidad para los lazos. La seguridad y comodidad de tus pequeñas es nuestra prioridad.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-base text-brand-brown mb-1">¿Cómo debo cuidar mis productos?</h3>
+                    <p>Para los amigurumis, recomendamos lavar a mano con jabón neutro y dejar secar a la sombra. Para los lazos, basta con limpiar suavemente con un paño húmedo si es necesario, evitando mojar los apliques metálicos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Envios Modal -->
+    <div id="envios-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full transform scale-95">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-brand-title">Políticas de Envío</h2>
+                <button class="close-modal text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-sm text-gray-600 max-h-[60vh] overflow-y-auto pr-4">
+                <p>Realizamos envíos a todo Chile a través de Starken o Correos de Chile, por pagar (el costo del envío lo pagas al recibir).</p>
+                <p>Una vez que tu pedido está preparado (3-5 días hábiles), lo entregamos a la empresa de courier. Los plazos de entrega del courier suelen ser de 2 a 5 días hábiles dependiendo de tu región.</p>
+                <p>Cuando tu pedido sea despachado, te enviaremos el número de seguimiento para que puedas ver el estado de tu envío en todo momento.</p>
+                <p>Es responsabilidad del cliente proporcionar una dirección de envío correcta y completa. No nos hacemos responsables por retrasos o costos adicionales debido a información incorrecta.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Devoluciones Modal -->
+    <div id="devoluciones-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full transform scale-95">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-brand-title">Políticas de Devolución</h2>
+                <button class="close-modal text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-sm text-gray-600 max-h-[60vh] overflow-y-auto pr-4">
+                <p>En Monerías de Tamara, cada producto es creado con mucho amor y dedicación. Debido a la naturaleza artesanal de nuestros artículos, pueden existir pequeñas variaciones que los hacen únicos y especiales.</p>
+                <p>Solo se aceptan devoluciones en caso de que el producto llegue con un defecto de fabricación evidente. Para ello, debes contactarnos dentro de los primeros 3 días después de haber recibido tu compra, adjuntando una foto del defecto.</p>
+                <p>No se realizan devoluciones por otros motivos. Los productos personalizados o hechos a pedido no tienen opción a cambio ni devolución.</p>
+                <p>Si tienes alguna duda sobre un producto antes de comprar, ¡no dudes en escribirnos! Estaremos felices de ayudarte.</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         // JavaScript para el menú móvil
@@ -278,6 +346,65 @@
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // JavaScript para los Modales
+        const modalTriggers = {
+            'faq-link': 'faq-modal',
+            'envios-link': 'envios-modal',
+            'devoluciones-link': 'devoluciones-modal'
+        };
+
+        const openModal = (modalId) => {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                const overlay = modal.querySelector('.modal-overlay');
+                const content = modal.querySelector('.modal-content');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    content.classList.remove('scale-95');
+                    content.classList.add('scale-100');
+                }, 10);
+            }
+        };
+
+        const closeModal = (modal) => {
+            const content = modal.querySelector('.modal-content');
+            modal.classList.add('opacity-0');
+            content.classList.remove('scale-100');
+            content.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        };
+
+        // Asignar eventos para abrir modales
+        for (const linkId in modalTriggers) {
+            const link = document.getElementById(linkId);
+            if (link) {
+                link.addEventListener('click', () => {
+                    openModal(modalTriggers[linkId]);
+                });
+            }
+        }
+
+        // Asignar eventos para cerrar modales
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal);
+                }
+            });
+        });
+        
+        document.querySelectorAll('.close-modal').forEach(button => {
+            button.addEventListener('click', () => {
+                closeModal(button.closest('.modal-overlay'));
+            });
+        });
+
     </script>
 </body>
 </html>
